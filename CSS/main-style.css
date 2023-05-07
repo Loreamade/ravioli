@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: Open Sans;
+}
+
+body{
+background-color: #f0f0f0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+/*Colores*/
+.bg-oscuro {
+    background-color: #443F9A;
+}
+
+/*Navbar*/
+.navbar-brand img{
+    max-height: 80px;
+}
+
+a.navbar-brand {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #ebecf0;
+}
+
+.nav-link-ind {
+    font-size: .8rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid #ffffff70;
+    margin: 0.3rem;
+    padding: 0.2rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+.nav-link-ind span {
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+}
+
+.nav-link-ind:hover {
+    background: #ebecf0;
+}
+
+.nav-link-ind:hover .nav-link{
+    color: #443F9A;
+}
+
+/*Hero*/
+
+.hero-wrap {
+    background: url(../Assets/IMG/hero.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+}
+
+
+.c-hero{
+    margin-top: 100px;
+    padding: 5vh 1rem;
+}
+
+.h-whale img {
+    max-width: 100%;
+    padding: 0 5vh;
+}
+
+.h-text-tit {
+    text-transform: uppercase;
+    color: #f8f9fa;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: rgb(93, 89, 166) 3px 0px 0px, rgb(93, 89, 166) 2.83487px 0.981584px 0px, rgb(93, 89, 166) 2.35766px 1.85511px 0px, rgb(93, 89, 166) 1.62091px 2.52441px 0px, rgb(93, 89, 166) 0.705713px 2.91581px 0px, rgb(93, 89, 166) -0.287171px 2.98622px 0px, rgb(93, 89, 166) -1.24844px 2.72789px 0px, rgb(93, 89, 166) -2.07227px 2.16926px 0px, rgb(93, 89, 166) -2.66798px 1.37182px 0px, rgb(93, 89, 166) -2.96998px 0.42336px 0px, rgb(93, 89, 166) -2.94502px -0.571704px 0px, rgb(93, 89, 166) -2.59586px -1.50383px 0px, rgb(93, 89, 166) -1.96093px -2.27041px 0px, rgb(93, 89, 166) -1.11013px -2.78704px 0px, rgb(93, 89, 166) -0.137119px -2.99686px 0px, rgb(93, 89, 166) 0.850987px -2.87677px 0px, rgb(93, 89, 166) 1.74541px -2.43999px 0px, rgb(93, 89, 166) 2.44769px -1.73459px 0px, rgb(93, 89, 166) 2.88051px -0.838247px 0px;
+}
+
+
+.h-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p.h-text-desc {
+    background: #7290D6;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-top: -0.5rem;
+    transform: rotate(358deg);
+    text-align: center;
+    color: #fff;
+}
+
+/*footer*/
+
+.c-footer {
+    background: url(../Assets/IMG/hero.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+    text-align: center;
+}
+
+ul.rrss {
+    list-style: none;
+    padding-top: 1rem;
+}
+
+.rrss li {
+    display: inline-block;
+    background: #ebecf0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.3rem;
+    border-radius: 100px;
+}
+
+.rrss a {
+    color: #7290d6;
+}
+
+.credit {
+    font-variant: all-petite-caps;
+    color: #fff;
+    margin-top: -1rem;
+    padding-bottom: 2rem;
+}
+.credit a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.rrss li:hover {
+    box-shadow: 0 0 11px 3px white;
+}
+
+/*CARDS*/
+
+#c-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.receta-card {
+    width: 95%;
+    margin: .5rem 0;
+}
+
+#c-cards .receta-card {
+    width: 18rem;
+}
+
+.receta-img {
+    width: 100%;
+    overflow: hidden;
+    height: 15rem;
+    border-radius: 8px;
+}
+
+.receta-img img{
+    width: 100%;
+}
+
+.receta-info {
+    background: #fbfbfb;
+    padding: 0.5rem;
+    margin: -4rem 1rem 0;
+    position: relative;
+    height: 10rem;
+    border-radius: 8px;
+    box-shadow: 1px 3px 9px 2px #443f9a3d;
+}
+
+.receta-status {
+    float: right;
+    position: relative;
+    margin-top: -2rem;
+    background: #7290D6;
+    color: #fff;
+    padding: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    border-radius: 100px;
+    left: 1rem;
+}
+
+.receta-title {
+    max-height: 4.8rem;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+
+.receta-title h3 {
+    font-size: 1.5rem;
+    padding: 1rem 0 0;
+    color: #443f9a;
+}
+
+.receta-tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    max-height: 4rem;
+}
+
+.tag {
+    display: inline-block;
+    font-size: .8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin: 0.1rem;
+}
+
+.tag-tiempo {
+    background: #EDE9C4;
+    color: #867a55;
+}
+
+.tag-dieta {
+    background: #AFCFF8;
+    color: #5D59A6;
+}
+
+.tag-tipo {
+    background: #7290D6;
+    color: #fff;
+}
+
+/*Search*/
+
+.c-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2.title-search {
+    color: #5D59A6;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+h5.subtitle-search {
+    background: #5D59A6;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    transform: rotate(359deg);
+}
+.b-search {
+    margin: 0.2rem;
+    border: none;
+}
+
+.b-search b {
+    background: #afcff8;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    border-radius: 8px;
+    color: #443f9a;
+}
+
+.b-search-2 {
+    background: #afcff8;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 8px;
+    color: #443f9a;
+}
+
+
+.b-search img {
+    background: #7290d6;
+    display: inline-block;
+    padding: 0.4rem;
+    border-radius: 100px;
+    margin-right: -1rem;
+    position: relative;
+    font-size: 2rem;
+    color: #ebecf0;
+    width: 4rem;
+    transition: .5s;
+}
+
+.b-search:hover img {
+    background: #443f9a;
+    transform: rotate(357deg);
+}
+
+/*Maxi card*/
+
+.m-receta-card {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-bottom: -4rem; 
+}
+
+.m-receta-img {
+    width: 100%;
+    overflow: hidden;
+    height: 28rem;
+    border-radius: 8px;
+}
+
+.m-receta-img img{
+    height: 100%;
+}
+
+.m-receta-info {
+    background: #fbfbfb;
+    padding: 1rem;
+    margin: 0 1rem;
+    position: relative;
+    height: 14rem;
+    border-radius: 8px;
+    box-shadow: 1px 3px 9px 2px #443f9a3d;
+    overflow: auto;
+    top: -7rem;
+    width: 95%;
+}
+
+.m-receta-status {
+    float: right;
+    position: relative;
+    background: #7290D6;
+    color: #fff;
+    padding: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    border-radius: 100px;
+    left: 1rem;
+    z-index: 2;
+    top: -5rem;
+}
+
+.m-receta-title {
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.m-receta-title h3 {
+    font-size: 2rem;
+    padding: 1rem 0 0;
+    color: #443f9a;
+}
+
+p.m-receta-desc {
+    font-size: 1rem;
+    word-break: break-all;
+    text-align: justify;
+    max-height: 4.2rem;
+    overflow: auto;
+}
+
+.m-receta-tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    max-height: 3.6rem;
+}
+
+.m-tag {
+    display: inline-block;
+    font-size: .8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin: 0.1rem 0;
+}
+
+/*Proximamente*/
+
+img.sad-ravioli {
+    max-height: 40vh;
+}
+
+img.search-placeholder {
+    width: 80%;
+}
+
+
+/*Recetas Carrusel*/
+
+h4.title-recetas-ejemplo {
+    color: #443F9A;
+    font-weight: 800;
+}
+
+
+#myCarousel {
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-start,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(25%) !important;
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-item-prev:not(.carousel-item-end),
+    .active.carousel-item-start,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    }
+
+    .carousel-item-next.carousel-item-start,
+    .active.carousel-item-end {
+        transform: translateX(0) !important;
+    }
+
+    .carousel-inner .carousel-item-prev,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    }
+}
+
+/*Modal detalle recetas*/
+nav.navbar.fixed-top.navbar-expand-lg.bg-oscuro {
+    z-index: 20;
+}
+
+.rd-imagen {
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    }
+
+.rd-imagen img{
+width: 100%;
+}
+
+.hystmodal__window {
+    border-radius: 5px;
+    }
+
+.rd-status, .rd-cart  {
+        position: relative;
+        background: rgb(93, 89, 166);
+        float: right;
+        top: -6rem;
+        font-size: 2rem;
+        color: #fff;
+        margin-bottom: -4rem;
+        margin-right: 1rem;
+        padding: 1rem;
+        height: 5rem;
+        width: 5rem;
+        text-align: center;
+        border-radius: 10rem;
+ }
+
+.rd-container {
+        padding: 1rem;
+ }
+
+ h3.rd-title {
+    color: #5D59A6;
+    font-weight: 600;
+}
+
+p.rd-desc {
+    color: #7290D6;
+    word-break: break-all;
+    text-align: justify;
+    font-size: .8rem;
+}
+
+h4.rd-subtitle {
+    font-size: 1rem;
+    color: #fff;
+    text-align: right;
+    background: #7290d5;
+    width: fit-content;
+    float: right;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transform: rotate(1deg);
+    margin-left: 0.5rem;
+}
+
+ul.rd-ingredients {
+    color: #5d59a6;
+}
+
+ol.rd-instructions {
+    list-style: lower-roman;
+}
+
+li.rd-single-intruction {
+    font-size: .9rem;
+    color: #201c58;
+    text-align: justify;
+}
+
+ol.rd-instructions > li:before {
+    background-color: #7290D6;
+    margin-right: 5px;
+    padding: 0.3rem;
+    content: counter(index, lower-roman) '.';
+    counter-increment: index;
+    border-radius: 50px;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+
+li.rd-single-intruction:first-child {
+    counter-reset:index;
+}
+ol.rd-instructions li {
+    list-style: none;
+}
+
+/*Lista de compras*/
+.c-lista {
+    margin-top: 110px;
+    padding: 2rem 0;
+}
+
+.lc-w-card {
+    background: #7290d6;
+    height: 10vh;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+img.lc-type {
+    height: 100%;
+}
+
+img.lc-type {
+    height: 100%;
+    float: left;
+}
+
+h4.lc-title {
+    color: #ebecf0;
+}
+
+.lc-favorite {
+    border: none;
+}
+
+button.lc-favorite {
+    background: #ebecf0;
+    color: #4d69ac;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    font-size: .9rem;
+}
+
+h3.lc-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #443f9a;
+}
+
+button.lc-generate {
+    border: none;
+    margin: 1rem auto;
+    display: block;
+    transform: rotate(1deg);
+}
+
+button.lc-generate b {
+    background: #aacaf3;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #546da9;
+}
+
+button.lc-generate i {
+    display: inline-block;
+    background: #fff;
+    font-size: 2rem;
+    color: #7290d6;
+    padding: 1rem;
+    border-radius: 400px;
+    margin-left: -1.5rem;
+}
+
+.lc-w-list {
+    display: flex;
+    background: #ebecf0;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #443f9a;
+}
+
+.lc-mail label {
+    display: block;
+    padding: 1rem 0;
+    font-weight: 600;
+    text-align: right;
+    color: #5d59a6;
+}
+
+.lc-mail input {
+    background: #d0d5e6;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    color: #5D59A6;
+    width: 95%;
+}
+
+form.lc-mail button {
+    border: none;
+    background: #443f9a;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 80px;
+    margin-left: -2rem;
+}
+
+
+/*Modal de correo*/
+.alertaMailIcono {
+    padding: 1rem;
+    text-align: center;
+}
+
+.alertaMailIcono i {
+    background: #7290D6;
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 100px;
+}
+
+#alertaMailModal h2 {
+    color: #5d59a6;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -1px;
+    padding: 0 1rem;
+}
+
+div#correolc {
+    background: #AFCFF8;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.4rem 2rem;
+    border-radius: 5px;
+    color: #1c176c;
+    transform: rotate(359deg);
+}
+
+#alertaMailModal p {
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: #7290D6;
+    text-align: center;
+    padding-top: 0.5rem;
+}

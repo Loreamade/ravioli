@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ravioli</title>
+  <link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/main-style.css" type="text/css">
+  <link rel="stylesheet" href="CSS/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="JS/hystModal/dist/hystmodal.min.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg bg-oscuro" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="/Assets/IMG/Logo.svg" alt=""> Ravioli </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end " id="navbarTogglerDemo02">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item nav-link-ind">
+              <a class="nav-link" href="Pages/proximamente.html"><span
+                  class="material-symbols-outlined">calendar_month</span> Ver Calendario</a>
+            </li>
+            <li class="nav-item nav-link-ind">
+              <a class="nav-link" href="/Pages/todas.html"><span class="material-symbols-outlined">menu_book</span>
+                Todas las recetas</a>
+            </li>
+            <li class="nav-item nav-link-ind">
+              <a class="nav-link" href="/Pages/lista-compras.html"><span
+                  class="material-symbols-outlined">shopping_cart</span> Hacer lista de compras</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- FIN NAVBAR -->
+  <!-- INICIO HERO -->
+  <div class="hero-wrap">
+    <div class="container c-hero">
+      <div class="row">
+        <div class="col-md-6 h-whale">
+          <img src="Assets/IMG/Logo.svg" alt="Logo ravioli">
+        </div>
+        <div class="col-md-6 h-text">
+          <h1 class="h-text-tit">Bienvenido Chef</h1>
+          <p class="h-text-desc">
+            a <strong>Ravioli</strong>, la aplicación que te da recetas al instante.
+            Filtra por ingredientes, tiempo de cocción o deja que te sorprendamos.
+            ¡Cocina sin tener que pensar en qué hacer!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIN HERO  -->
+
+  <!-- ZONA PRINCIPAL -->
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 c-search">
+          <h2 class="title-search">¿Que quieres cocinar hoy?</h2>
+          <h5 class="subtitle-search">No sabes, pues para eso estamos!</h5>
+          <button type="button" onclick="searchRecipe('Desayuno')" class="b-search"><img src="/Assets/IMG/iconos/desayuno.svg" alt=""><b>Quiero
+              un desayuno</b></button>
+          <button type="button" onclick="searchRecipe('Almuerzo')" class="b-search b-search-2"><b>Que hago de almuerzo</b> <img
+              src="/Assets/IMG/iconos/almuerzo.svg" alt=""></button>
+          <button type="button" onclick="searchRecipe('Cena')" class="b-search"> <img src="/Assets/IMG/iconos/cena.svg" alt=""> <b>Que
+              podríamos cenar </b> </button>
+          <button type="button" onclick="searchRecipe('Snack')" class="b-search b-search-2"><b>Tengo ganas de algo rico </b> <img
+              src="/Assets/IMG/iconos/snaks.svg" alt=""></button>
+        </div>
+        <div class="col-md-6">
+          <img src="Assets/IMG/cook.svg" alt="Esperando" class="search-placeholder">
+          <!-- <div class="m-receta-card">
+              <div class="m-receta-img">
+               <img id="" src="../Assets/IMG/hero.jpg" alt="">
+              </div>
+               <div id="receta-status" class="m-receta-status"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+               <div class="m-receta-info">
+               <div class="m-receta-title">
+                 <h3>Spagetti Bolognesa</h3>
+               </div>
+               <p class="m-receta-desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae doloribus dolorum dolorem minus? Consectetur iste, vitae labore esse, aut cum unde animi sequi facere blanditiis asperiores dolor non, necessitatibus explicabo?
+               </p>
+               <ul class="m-receta-tags">
+                 <li class="m-tag tag-tiempo"><i class="fa fa-clock-o" aria-hidden="true"></i> 30 minutos</li>
+                 <li class="m-tag tag-tipo">Desayuno</li>
+                 <li class="m-tag tag-dieta">Sin lactosa</li>
+                 <li class="m-tag tag-dieta">Sin lactosa</li>
+                 <li class="m-tag tag-dieta">Vegetariano</li>
+               </ul>
+              </div>
+             </div>  -->
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <!-- FIN ZONA PRINCIPAL -->
+
+  <!-- RECETAS DE EJEMPLO -->
+
+  <div class="container">
+    <h4 class="title-recetas-ejemplo">Tientate con algunas de nuestras recetas</h4>
+    <div id="myCarousel" class="carousel slide container" data-bs-ride="carousel">
+      <div class="carousel-inner w-100" id="carousel-recipes-container">
+        <div class="carousel-item active">
+          <div class="col-md-3">
+            <div class="receta-card">
+              <div class="receta-img">
+                <img id="" src="../Assets/IMG/hero.jpg" alt="">
+              </div>
+              <div class="receta-info">
+                <div id="receta-status" class="receta-status"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+                <div class="receta-title">
+                  <h3 class="nombreRecetaMini">Receta 1</h3>
+                </div>
+                <ul class="receta-tags">
+                  <li class="tag tag-tiempo"><i class="fa fa-clock-o" aria-hidden="true"></i> 30 minutos</li>
+                  <li class="tag tag-dieta">Vegetariano</li>
+                  <li class="tag tag-dieta">Sin lactosa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- FIN RECETAS DE EJEMPLO -->
+  <!-- MODAL DETALLE RECETAS -->
+  <div class="hystmodal" id="myModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button data-hystclose class="hystmodal__close">Закрыть</button>
+        <div class="rd-imagen">
+          <img src="Assets/IMG/hero.jpg" alt="" id="rd-image">
+          <div id="rd-status" class="rd-status"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+          <div id="rd-cart" class="rd-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="rd-container">
+          <h3 class="rd-title" id="rd-title">Receta</h3>
+          <ul class="receta-tags" id="rd-tags">
+
+          </ul>
+          <p class="rd-desc" id="rd-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui cumque
+            temporibus vitae similique repellendus
+            vel aperiam perferendis,
+            officiis placeat expedita corporis tenetur id numquam dignissimos ea delectus maiores eveniet blanditiis!
+          </p>
+          <h4 class="rd-subtitle">Ingredientes</h4>
+          <ul class="rd-ingredients" id="rd-ingredients">
+            <li class="rd-single-ingredient"> miau</li>
+            <li class="rd-single-ingredient"> miau</li>
+            <li class="rd-single-ingredient"> miau</li>
+            <li class="rd-single-ingredient"> miau</li>
+            <li class="rd-single-ingredient"> miau</li>
+          </ul>
+          <h4 class="rd-subtitle">Instrucciones</h4>
+          <ol class="rd-instructions" id="rd-instructions">
+            <li class="rd-single-intruction">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, quas
+              voluptate voluptatum corrupti fuga incidunt praesentium at reprehenderit veritatis repudiandae iusto nam,
+              aspernatur, voluptates odio suscipit unde. Illum, ipsa laborum?</li>
+            <li class="rd-single-intruction">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, quas
+              voluptate voluptatum corrupti fuga incidunt praesentium at reprehenderit veritatis repudiandae iusto nam,
+              aspernatur, voluptates odio suscipit unde. Illum, ipsa laborum?</li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- <a href="#" data-hystmodal="#myModal" id="myModal">Open modal with id=myModal</a> -->
+  <!-- FIN MODAL DETALLE RECETAS -->
+  <!-- FOOTER -->
+
+  <footer class="c-footer">
+    <div class="container">
+      <ul class="rrss">
+        <li><a href="/Pages/proximamente.html"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+        <li><a href="/Pages/proximamente.html"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="/Pages/proximamente.html"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="/Pages/proximamente.html"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="credit">2023 © Lorena Muñoz | <a href="https://jovial-haibt-bf79f2.netlify.app" target="_blank">View
+          more</a></div>
+    </div>
+  </footer>
+  <!-- FIN FOOTER -->
+  <script src="JS/hystModal/dist/hystmodal.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src="JS/bootstrap.min.js"></script>
+  <script src="JS/fuctions.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+
+</html>
