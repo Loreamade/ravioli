@@ -573,6 +573,7 @@ ol.rd-instructions li {
     border-radius: 8px;
     display: flex;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 img.lc-type {
@@ -586,10 +587,13 @@ img.lc-type {
 
 h4.lc-title {
     color: #ebecf0;
+    max-height: 1.9rem;
+    overflow: hidden;
 }
 
 .lc-favorite {
     border: none;
+    margin-right: 0.2rem;
 }
 
 button.lc-favorite {
@@ -632,11 +636,14 @@ button.lc-generate i {
 }
 
 .lc-w-list {
-    display: flex;
     background: #ebecf0;
     padding: 1rem;
     border-radius: 5px;
     color: #443f9a;
+}
+
+.lc-w-list ul {
+    margin: 0
 }
 
 .lc-mail label {

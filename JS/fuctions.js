@@ -234,18 +234,14 @@ function borrarListeners(elementoOriginal) {
 
 // Agregar a la lista
 function setBotonAgregarAlCarrito(recipe) {
-    console.log("SET")
     const carrito = getCarrito()
 
     let botonCart = document.getElementById("rd-cart");
     botonCart.innerHTML = '<i class="fa fa-cart-plus" aria-hidden="true"></i>';
     botonCart = borrarListeners(botonCart)
 
-    console.log("CARRITO", carrito)
-    console.log("RECIPE", recipe)
     const existe = carrito.some(recipeCarrito => recipeCarrito.uuid === recipe.uuid )
     if (!existe) {
-        console.log("NO EXISTE")
         botonCart.addEventListener('click', function handleClick() {
             botonCart.innerHTML = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
             carrito.push(recipe);
@@ -253,11 +249,137 @@ function setBotonAgregarAlCarrito(recipe) {
             botonCart = borrarListeners(botonCart)
         })
     } else {
-        console.log("EXISTE")
         botonCart.innerHTML = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
     }
 }
 
-function borrarDelCarrito() {
-    
+//Creador de LISTA de recetas
+function crearLista() {
+    const listaRecetasCart = document.querySelector('#lcCart');
+    listaRecetasCart.innerHTML = ""
+getCarrito().forEach(function(recipe) {
+    listaRecetasCart.appendChild(crearRecetaEnCart(recipe))
+});
+
 }
+
+crearLista()
+
+//Creador de recetas de la lista
+
+function crearRecetaEnCart(recipe){
+     
+    const card = document.createElement('div');
+    card.className = 'lc-w-card';
+
+    const title = document.createElement('h4');
+    title.className = 'lc-title';
+    title.textContent = recipe.name;
+
+    const cardInner = document.createElement('div');
+    cardInner.className = 'lc-card';
+
+    const image = document.createElement('img');
+    image.src = "https://ravioliapp.s3.amazonaws.com/cardPlaceholder.jpg"
+    image.className = 'lc-type';
+    recipe.tags.forEach(tag => { 
+          if (tag.name == "Snack") {
+            image.src = "../Assets/IMG/iconos/snaks.svg"
+           } if (tag.name == "Almuerzo") {
+            image.src = "../Assets/IMG/iconos/almuerzo.svg"
+           } if (tag.name == "Desayuno") {
+            image.src = "../Assets/IMG/iconos/desayuno.svg"
+          } if (tag.name == "Cena") {
+            image.src = "../Assets/IMG/iconos/cena.svg"
+          }
+        });
+
+        const button1 = document.createElement('button');
+        button1.className = 'lc-favorite';
+        button1.innerHTML = '<i class="fa fa-heart-o" aria-hiddesn="true"></i> Borrar y enviar favorito';
+        button1.type = 'button'
+        button1.onclick = () => removeRecipe(recipe.uuid); 
+
+        const button2 = document.createElement('button');
+        button2.className = 'lc-favorite';
+        button2.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i> Borrar receta de la lista';
+        button2.type = 'button'
+        button2.onclick = () => removeRecipe(recipe.uuid); 
+
+
+      card.appendChild(image);
+      card.appendChild(cardInner);
+      cardInner.appendChild(title);
+      cardInner.appendChild(button1);
+      cardInner.appendChild(button2);
+      
+      image.onclick = () => { 
+        abrirModal(recipe.uuid)
+    }
+
+      return card
+}
+
+//Generar la lista de ingredientes
+
+function botonListaCart() {
+    const listaIngredientes = document.querySelector('#lc-list');
+    listaIngredientes.innerHTML = ""; 
+    getCarrito().forEach(function(recipe) {
+    listaIngredientes.appendChild(generarListaCart(recipe))
+});
+
+}
+
+function generarListaCart(recipe) {
+     const cartingredients = document.createElement('ul');
+    cartingredients.innerHTML = "";
+    recipe.ingredients.forEach(ingredient => {
+        const liIngredient = document.createElement('li');
+        liIngredient.textContent = ingredient
+        cartingredients.appendChild(liIngredient);
+      });
+ return cartingredients
+ 
+ }
+
+ //Borrar  recetas
+ /*
+let removeRecipe = document.querySelectorAll('.lc-favorite');
+const carrito = getCarrito()
+carrito.forEach(function(recipe) {
+    removeRecipe.addEventListener('click', () => {
+        const recipeId = recipe.uuid ;
+        const listaRecetas = JSON.parse(getCarrito());
+
+//  removeRecipe.forEach((recipe) => {
+//    button.addEventListener('click', () => {
+//      const recipeId = recipe.uuid ;
+//      const listaRecetas = JSON.parse(getCarrito());
+ 
+     // Busca la receta correspondiente en la lista de favoritos y elimínala
+     const index = listaRecetas.findIndex((recipe) => recipe.uuid === recipeId);
+     listaRecetas.splice(index, 1);
+ 
+     // Actualiza el almacenamiento local con la nueva lista de favoritos
+     localStorage.setItem('listaRecetas', JSON.stringify(listaRecetas));
+ 
+   });
+ });
+
+ */
+ 
+ function removeRecipe(uuid) {
+    const carrito = getCarrito()
+    const existe = carrito.some(recipeCarrito => recipeCarrito.uuid === uuid )
+    if (existe) {
+        let posicionCarrito = carrito.findIndex(encontrarReceta => {
+            return encontrarReceta.uuid === uuid;
+          });
+
+        carrito.splice(posicionCarrito, 1);
+        localStorage.setItem("recetasEnCarrito", JSON.stringify(carrito));
+        crearLista()
+       
+    }
+};

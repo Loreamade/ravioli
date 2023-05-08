@@ -42,20 +42,15 @@
         <div class="row">
             <div class="col-md-6">
                 <h3 class="lc-title">Recetas</h3>
-                <div class="lc-w-card">
-                    <img src="../Assets/IMG/iconos/snaks.svg" class="lc-type" alt="">
-                    <div class="lc-card">
-                        <h4 class="lc-title">Receta</h4>
-                        <button type="button" class="lc-favorite"><i class="fa fa-heart-o" aria-hidden="true"></i> Borrar y enviar favoritos</button>
-                        <button type="button" class="lc-favorite"><i class="fa fa-trash" aria-hidden="true"></i> Borrar receta de la lista</button>
-                    </div>
+                <div id="lcCart"> 
+
                 </div>
-                <button type="button" class="lc-generate"><b>Generar lista de compras</b> <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                <button type="button" class="lc-generate" onclick="botonListaCart()"><b>Generar lista de compras</b> <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
             </div>
             <div class="col-md-6">
-                <div class="lc-w-list">
-                    <ul class="lc-list">
-                        <li>Ingrediente</li>
+                <div class="lc-w-list" id="lc-list" >
+                    <ul>
+                    
                     </ul>
                 </div>
                 <form action="" class="lc-mail">
@@ -79,6 +74,48 @@
       </div>
   </div>
 
+   <!-- MODAL DETALLE RECETAS -->
+   <div class="hystmodal" id="myModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button data-hystclose class="hystmodal__close">Закрыть</button>
+        <div class="rd-imagen">
+          <img src="Assets/IMG/hero.jpg" alt="" id="rd-image">
+          <div id="rd-status" class="rd-status"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+          <div id="rd-cart" class="rd-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="rd-container">
+          <h3 class="rd-title" id="rd-title">Receta</h3>
+          <ul class="receta-tags" id="rd-tags">
+
+          </ul>
+          <p class="rd-desc" id="rd-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui cumque
+            temporibus vitae similique repellendus
+            vel aperiam perferendis,
+            officiis placeat expedita corporis tenetur id numquam dignissimos ea delectus maiores eveniet blanditiis!
+          </p>
+          <h4 class="rd-subtitle">Ingredientes</h4>
+          <ul class="rd-ingredients" id="rd-ingredients">
+            <li class="rd-single-ingredient"> miau</li>
+            <li class="rd-single-ingredient"> miau</li>
+            <li class="rd-single-ingredient"> miau</li>
+            <li class="rd-single-ingredient"> miau</li>
+            <li class="rd-single-ingredient"> miau</li>
+          </ul>
+          <h4 class="rd-subtitle">Instrucciones</h4>
+          <ol class="rd-instructions" id="rd-instructions">
+            <li class="rd-single-intruction">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, quas
+              voluptate voluptatum corrupti fuga incidunt praesentium at reprehenderit veritatis repudiandae iusto nam,
+              aspernatur, voluptates odio suscipit unde. Illum, ipsa laborum?</li>
+            <li class="rd-single-intruction">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, quas
+              voluptate voluptatum corrupti fuga incidunt praesentium at reprehenderit veritatis repudiandae iusto nam,
+              aspernatur, voluptates odio suscipit unde. Illum, ipsa laborum?</li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+  </div>
     <!-- FOOTER -->
     <footer class="c-footer">
         <div class="container">
