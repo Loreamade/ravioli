@@ -140,7 +140,7 @@ function likeStatus() {
 //Abrir el modal de la receta especifica
 
 function abrirModal(id) {
-    fetch('https://34.202.241.96/recipe/' + id)
+    fetch('http://34.202.241.96/recipe/' + id)
     .then(response => response.json())
     .then(recipe => {
       modalReceta(recipe)
@@ -194,7 +194,7 @@ function modalReceta(recipe){
 //  Buscador de recetas
 
 function searchRecipe(etiqueta) {
-    fetch('https://34.202.241.96/recipes')
+    fetch('http://34.202.241.96/recipes')
     .then(response => response.json())
     .then(recipes => {
         const filteredRecipes = recipes.filter(recipe => {
@@ -257,9 +257,9 @@ function setBotonAgregarAlCarrito(recipe) {
 function crearLista() {
     const listaRecetasCart = document.querySelector('#lcCart');
     listaRecetasCart.innerHTML = ""
-getCarrito().forEach(function(recipe) {
-    listaRecetasCart.appendChild(crearRecetaEnCart(recipe))
-});
+    getCarrito().forEach(function(recipe) {
+        listaRecetasCart.appendChild(crearRecetaEnCart(recipe))
+    });
 
 }
 
