@@ -1,6 +1,6 @@
 const contenedorCard = document.querySelector('#c-cards');
 
-fetch('http://34.202.241.96/recipes')
+fetch('https://34.202.241.96/recipes')
   .then(response => response.json())
   .then(recipes => {
     for (let i = 0; i < recipes.length; i++) {
