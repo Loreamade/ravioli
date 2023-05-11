@@ -140,7 +140,7 @@ function likeStatus() {
 //Abrir el modal de la receta especifica
 
 function abrirModal(id) {
-    fetch('http://34.202.241.96/recipe/' + id)
+    fetch('https://www.ronetto.dev/ravioli/recipe/' + id)
     .then(response => response.json())
     .then(recipe => {
       modalReceta(recipe)
@@ -194,7 +194,7 @@ function modalReceta(recipe){
 //  Buscador de recetas
 
 function searchRecipe(etiqueta) {
-    fetch('http://34.202.241.96/recipes')
+    fetch('https://www.ronetto.dev/ravioli/recipes')
     .then(response => response.json())
     .then(recipes => {
         const filteredRecipes = recipes.filter(recipe => {
