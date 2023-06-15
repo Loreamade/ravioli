@@ -5,7 +5,7 @@
 // Creador cards
 const mostrarMiniRecetas = document.querySelector('#carousel-recipes-container');
 
-fetch('https://www.ronetto.dev/ravioli/recipes')
+fetch('/JS/recipes.json')
   .then(response => response.json())
   .then(recipes => {
     crearCarouselCards(recipes)

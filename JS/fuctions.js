@@ -36,7 +36,7 @@ function crearCard(recipe){
 
 
     card.onclick = () => { 
-        abrirModal(recipe.uuid)
+        abrirModal(recipe.id)
     }
 
     const cardInfo = document.createElement('div');
@@ -138,13 +138,14 @@ function likeStatus() {
 
 
 //Abrir el modal de la receta especifica
-
 function abrirModal(id) {
-    fetch('https://www.ronetto.dev/ravioli/recipe/' + id)
+    fetch('/JS/recipes.json')
     .then(response => response.json())
-    .then(recipe => {
-      modalReceta(recipe)
-    });
+    .then(recipes => {
+        const recipe = recipes.find(recipe => recipe.id === id)
+        console.log("RECIPE", recipe)
+        modalReceta(recipe)
+     })
 }
 
 //Creador del modal
@@ -194,7 +195,7 @@ function modalReceta(recipe){
 //  Buscador de recetas
 
 function searchRecipe(etiqueta) {
-    fetch('https://www.ronetto.dev/ravioli/recipes')
+    fetch('/JS/recipes.json')
     .then(response => response.json())
     .then(recipes => {
         const filteredRecipes = recipes.filter(recipe => {
@@ -256,6 +257,9 @@ function setBotonAgregarAlCarrito(recipe) {
 //Creador de LISTA de recetas
 function crearLista() {
     const listaRecetasCart = document.querySelector('#lcCart');
+    if (listaRecetasCart === null) {
+        return;
+    }
     listaRecetasCart.innerHTML = ""
     getCarrito().forEach(function(recipe) {
         listaRecetasCart.appendChild(crearRecetaEnCart(recipe))
@@ -314,7 +318,7 @@ function crearRecetaEnCart(recipe){
       cardInner.appendChild(button2);
       
       image.onclick = () => { 
-        abrirModal(recipe.uuid)
+        abrirModal(recipe.id)
     }
 
       return card
